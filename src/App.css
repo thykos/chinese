@@ -1,24 +1,21 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC|Roboto&display=swap');
+
+.ch-app {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.ch-link {
+  width: 100%;
+  font-size: 24px;
+  color: #000;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.ch-link a, .ch-link a:hover, .ch-link a:visited, .ch-link a:active, .ch-link a:focus {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,0 +1,24 @@
+.ch-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.ch-card-ch-wrapper {
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.ch-card-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ch-card-detail {
+    display: flex;
+    font-size: 30px;
+    padding: 10px 20px;
+}
