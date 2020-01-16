@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="ch-app">
         <Provider store={store}>
-        <Router/>
+          <Router/>
         </Provider>
       </div>
     );

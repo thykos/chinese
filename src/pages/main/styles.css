@@ -1,6 +1,5 @@
 .ch-main-wrapper {
     display: flex;
-    height: 100%;
     width: 100%;
     flex: 1 100%;
     align-items: center;
@@ -8,12 +7,6 @@
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-}
-
-.ch-main-link-wrapper {
-    width: 100%;
-    text-align: center;
-    padding: 10px 20px;
 }
 
 .ch-main-link-wrapper:first-child {

@@ -1,8 +1,9 @@
+import React from 'react';
 import { createStore, combineReducers } from 'redux';
-import { reducer as auth } from './auth';
+import { reducer as ui } from './ui';
 
 const store = combineReducers({
-  auth
+  ui,
 });
 
-export default createStore(store);
+export default createStore(store, window.__REDUX_DEVTOOLS_EXTENSION__());

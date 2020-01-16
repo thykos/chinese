@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import library from '../../static/library';
 import Card from '../../components/card';
 import Button from '../../components/button';
+import ChText from '../../components/chText';
 import './styles.css';
 
 const Learn = () => {
@@ -16,9 +17,9 @@ const Learn = () => {
   const link = (item, text) => (
     item
     ? <Link to={`/learn/${item.pinyin}`} className="ch-link ch-learn-link">
-        <Button className="ch-learn-btn">{text}</Button>
+        <Button className="ch-learn-btn"><ChText>{text}</ChText></Button>
       </Link>
-      : <Button className="ch-learn-btn" disabled={!item}>{text}</Button>
+      : <Button className="ch-learn-btn" disabled={!item}><ChText>{text}</ChText></Button>
   );
   return (
     <div className="ch-learn-wrapper">
@@ -26,8 +27,8 @@ const Learn = () => {
         <Card {...word}/>
       </div>
       <div className="ch-learn-btns-wrapper">
-        {link(previous, 'Previous')}
-        {link(next, 'Next')}
+        {link(previous, '以前')}
+        {link(next, '下一个')}
       </div>
     </div>
   )
