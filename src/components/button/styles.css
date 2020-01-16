@@ -6,4 +6,10 @@
     align-items: center;
     justify-content: center;
     padding: 12px 24px;
+    background: none;
+    outline: none;
+}
+
+.ch-button:active, .ch-button:hover {
+    background: #f7f7f7;
 }

@@ -6,7 +6,7 @@ import './styles.css';
 const Button = ({ onClick, disabled, children, className }) => (
   <button
     disabled={disabled}
-    onClick={onClick}
+    onClick={onClick ? onClick : () => {}}
     className={cx('ch-button', className)}
     type="button"
   >
