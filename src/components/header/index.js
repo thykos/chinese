@@ -10,10 +10,7 @@ import ChText from "../chText";
 const Header = ({ title, setTitle }) => {
   const [show, onChange] = useState(false);
 
-  const onHide = (value) => {
-    setTitle(value);
-    onChange(false);
-  };
+  const onHide = () => onChange(false);
 
   return (
     <Fragment>
@@ -28,10 +25,10 @@ const Header = ({ title, setTitle }) => {
       {show ?
         <div className="ch-menu-wrapper">
           <div className="ch-link ch-menu-link-wrapper">
-            <Link to="/learn" onClick={() => onHide('学习')}><ChText size={36}>学习</ChText></Link>
+            <Link to="/learn" onClick={onHide}><ChText size={36}>学习</ChText></Link>
           </div>
           <div className="ch-link ch-menu-link-wrapper">
-            <Link to="/test" onClick={() => onHide('通过测试')}><ChText size={36}>通过测试</ChText></Link>
+            <Link to="/test" onClick={onHide}><ChText size={36}>通过测试</ChText></Link>
           </div>
         </div>
         : null

@@ -8,7 +8,7 @@ const Card = (props) => {
   return (
     <div className="ch-card-wrapper">
       <div className="ch-card-ch-wrapper">
-        <ChText size={96}>{ch}</ChText>
+        <ChText size={ch.length > 3 ? 64 : 80}>{ch}</ChText>
       </div>
       <div className="ch-card-details">
         <div className="ch-card-detail">
