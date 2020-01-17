@@ -30,6 +30,9 @@ const Header = ({ title, setTitle }) => {
           <div className="ch-link ch-menu-link-wrapper">
             <Link to="/test" onClick={onHide}><ChText size={36}>通过测试</ChText></Link>
           </div>
+          <div className="ch-link ch-menu-link-wrapper">
+            <Link to="/test-pinyin" onClick={onHide}><ChText size={36}>通过测试(pinyin)</ChText></Link>
+          </div>
         </div>
         : null
       }

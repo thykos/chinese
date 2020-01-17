@@ -1,0 +1,66 @@
+.ch-test-wrapper {
+    padding: 20px 0 0;
+    box-sizing: border-box;
+    flex: 1 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ch-test-word {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.ch-test-answers {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ch-test-answer {
+    width: 50%;
+    font-size: 20px;
+}
+
+.ch-test-answer-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 100%;
+}
+
+.ch-test-answer-card-wrapper {
+    flex: 2;
+}
+
+.ch-test-answer-placeholder {
+    font-size: 24px;
+    margin-top: 30px;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.ch-test-answer-placeholder.valid {
+    color: #47c648;
+}
+
+.ch-test-answer-placeholder.invalid {
+    color: #c6504f;
+}
+
+.ch-test-answer-link-wrapper {
+    height: 60px;
+}
+
+.ch-test-answer-link-wrapper a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
