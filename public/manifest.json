@@ -1,0 +1,9 @@
+{
+  "name": "chinese-a3-1",
+  "short_name": "ch-a3",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#fff"
+}
