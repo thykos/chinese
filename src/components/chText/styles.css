@@ -1,3 +1,17 @@
 .ch-chinese-text {
     font-family: 'Noto Sans SC', sans-serif;
 }
+
+.ch-chinese-text-animate {
+    animation-name: shadow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shadow {
+    0% { text-shadow: 0 0 4px blue; }
+    25% { text-shadow: 0 0 4px green; }
+    50% { text-shadow: 0 0 4px yellow; }
+    75% { text-shadow: 0 0 4px orange; }
+    100% { text-shadow: 0 0 4px red; }
+}
