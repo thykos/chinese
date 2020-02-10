@@ -28,6 +28,9 @@ const Header = ({ title, setTitle }) => {
             <Link to="/learn" onClick={onHide}><ChText size={36}>学习</ChText></Link>
           </div>
           <div className="ch-link ch-menu-link-wrapper">
+            <Link to="/learn-pinyin" onClick={onHide}><ChText size={36}>学习(pinyin)</ChText></Link>
+          </div>
+          <div className="ch-link ch-menu-link-wrapper">
             <Link to="/test" onClick={onHide}><ChText size={36}>通过测试</ChText></Link>
           </div>
           <div className="ch-link ch-menu-link-wrapper">

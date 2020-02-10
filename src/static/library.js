@@ -1,4 +1,4 @@
-export default [
+const library = [
   {
     ru: 'Привет',
     ch: '你好',
@@ -564,5 +564,7 @@ export default [
     ch: '明天',
     pinyin: 'míngtiān'
   }
+].sort((a, b)=> a.pinyin.localeCompare(b.pinyin, 'zh-CN'));
 
-];
+
+export default library;

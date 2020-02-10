@@ -21,9 +21,13 @@ class Router extends Component {
               <Main />
             </Route>
 
+            <Route path="/learn-pinyin/:wordId">
+              <Learn pinyin />
+            </Route>
             <Route path="/learn/:wordId">
               <Learn />
             </Route>
+
             <Route path="/test/:wordId">
               <Test />
             </Route>
@@ -41,6 +45,10 @@ class Router extends Component {
 
             <Route exact path="/learn">
               <LearnList />
+            </Route>
+
+            <Route exact path="/learn-pinyin">
+              <LearnList pinyin />
             </Route>
 
             <Route exact path="/results">

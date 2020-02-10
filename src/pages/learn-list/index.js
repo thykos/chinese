@@ -7,10 +7,13 @@ import { Link } from 'react-router-dom';
 import ChText from '../../components/chText';
 import './styles.css';
 
-const LearnList = ({ setTitle }) => {
+const LearnList = ({ setTitle, pinyin }) => {
   useEffect(() => {
-    setTitle('学习');
+    setTitle(`学习${pinyin ? '(pinyin)' : ''}`);
   });
+
+
+  const link = pinyin ? '/learn-pinyin' : '/learn';
 
   return (
     <div className="ch-learn-list-wrapper">
@@ -18,9 +21,9 @@ const LearnList = ({ setTitle }) => {
         {library.map((item, idx) => (
           <li key={idx}>
             <div className="ch-link">
-              <Link to={`/learn/${item.pinyin}`} className>
+              <Link to={`${link}/${item.pinyin}`}>
                 <div>
-                  <ChText size={24}>{item.ch}</ChText>
+                  <ChText size={24}>{pinyin ? item.pinyin : item.ch}</ChText>
                 </div>
               </Link>
             </div>
@@ -32,7 +35,8 @@ const LearnList = ({ setTitle }) => {
 };
 
 LearnList.propTypes = {
-  setTitle: PropTypes.func.isRequired
-}
+  setTitle: PropTypes.func.isRequired,
+  pinyin: PropTypes.bool
+};
 
 export default connect(null, { setTitle })(LearnList);

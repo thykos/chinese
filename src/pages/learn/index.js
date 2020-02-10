@@ -10,9 +10,9 @@ import Button from '../../components/button';
 import ChText from '../../components/chText';
 import './styles.css';
 
-const Learn = ({ setTitle }) => {
+const Learn = ({ setTitle, pinyin }) => {
   useEffect(() => {
-    setTitle('学习');
+    setTitle(`学习${pinyin ? '(pinyin)' : ''}`);
   });
 
   const { wordId } = useParams();
@@ -21,12 +21,14 @@ const Learn = ({ setTitle }) => {
   const next = wordIndex + 1 > library.length ? null : library[wordIndex + 1];
   const previous = wordIndex - 1 < 0 ? null : library[wordIndex - 1];
 
+  const linkType = pinyin ? '/learn-pinyin' : '/learn';
+
   const link = (item, text) => (
     item
-      ? <Link to={`/learn/${item.pinyin}`} className="ch-link ch-learn-link">
+      ? <Link to={`${linkType}/${item.pinyin}`} className="ch-link ch-learn-link">
           <Button className="ch-learn-btn"><ChText>{text}</ChText></Button>
         </Link>
-      : <Link to={`/learn`} className="ch-link ch-learn-link">
+      : <Link to={linkType} className="ch-link ch-learn-link">
           <Button className="ch-learn-btn"><ChText>{text}</ChText></Button>
         </Link>
   );
@@ -44,7 +46,8 @@ const Learn = ({ setTitle }) => {
 };
 
 Learn.propTypes = {
-  setTitle: PropTypes.func.isRequired
+  setTitle: PropTypes.func.isRequired,
+  pinyin: PropTypes.bool
 };
 
 export default connect(null, { setTitle })(Learn);
