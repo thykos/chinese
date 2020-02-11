@@ -335,11 +335,6 @@ const library = [
     pinyin: 'chī'
   },
   {
-    ru: 'Пить',
-    ch: '喝',
-    pinyin: 'hē'
-  },
-  {
     ru: 'Сидеть',
     ch: '坐',
     pinyin: 'zuò'
