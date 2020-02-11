@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ChText from '../chText';
 import { Howl } from 'howler';
 import audio from '../../static/audio';
+import Visualizer from '../visualizer';
 import './styles.css';
 
 const Card = (props) => {
@@ -32,7 +33,8 @@ const Card = (props) => {
   return (
     <div className="ch-card-wrapper">
       <div className="ch-card-ch-wrapper" onClick={play}>
-        <ChText size={ch.length > 3 ? 64 : 80} animate={audioFile}>{ch}</ChText>
+        {Boolean(audioFile) ? <Visualizer play={!canPlay} className="ch-card-ch-visualizer"/> : null}
+        <ChText size={ch.length > 3 ? 64 : 80}>{ch}</ChText>
       </div>
       <div className="ch-card-details">
         <div className="ch-card-detail">

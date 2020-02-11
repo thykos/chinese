@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import './styles.css';
 
-const ChText = ({ children, size, className, animate }) => (
+const ChText = ({ children, size }) => (
   <span
-    className={
-      cx('ch-chinese-text', className, {'ch-chinese-text-animate': animate})
-    }
+    className="ch-chinese-text"
     style={{ fontSize: size }}
   >
     {children}
@@ -16,9 +14,7 @@ const ChText = ({ children, size, className, animate }) => (
 
 ChText.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
-  size: PropTypes.number,
-  animate: PropTypes.bool,
-  className: PropTypes.string
+  size: PropTypes.number
 };
 
 export default ChText;

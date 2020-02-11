@@ -7,8 +7,18 @@
 
 .ch-card-ch-wrapper {
     text-align: center;
-    padding: 10px 20px;
+    padding: 50px 20px 10px;
     margin-bottom: 30px;
+    position: relative;
+}
+
+.ch-card-ch-visualizer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    pointer-events: none;
 }
 
 .ch-card-details {
